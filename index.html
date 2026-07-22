@@ -1108,6 +1108,11 @@
             <h2>Knowledge Check Quiz</h2>
             <p style="margin-bottom: 20px;">Test your knowledge. Passing score: 70% (14/20 correct).</p>
 
+            <div class="info-box">
+                <label for="quizName" style="display: block; margin-bottom: 10px;"><strong>Enter your name:</strong></label>
+                <input type="text" id="quizName" placeholder="Your full name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;">
+            </div>
+
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill" style="width: 0%"></div>
             </div>
@@ -1353,6 +1358,13 @@
         };
 
         function submitQuiz() {
+            const quizName = document.getElementById('quizName').value.trim();
+
+            if (!quizName) {
+                alert('Please enter your name before submitting the quiz.');
+                return;
+            }
+
             let score = 0;
             let results = [];
 
@@ -1381,11 +1393,12 @@
             scoreDisplay.classList.add(pass ? 'pass' : 'fail');
 
             const message = document.getElementById('scoreMessage');
+            const nameDisplay = `<strong>${quizName}</strong> — `;
             if (pass) {
-                message.textContent = `Excellent! You passed with ${score}/20 correct. You're ready to represent Accelerated Academy!`;
+                message.textContent = nameDisplay + `Excellent! You passed with ${score}/20 correct. You're ready to represent Accelerated Academy!`;
                 message.style.color = 'var(--success)';
             } else {
-                message.textContent = `You scored ${score}/20. Review the training materials and try again to reach 70%.`;
+                message.textContent = nameDisplay + `You scored ${score}/20. Review the training materials and try again to reach 70%.`;
                 message.style.color = 'var(--danger)';
             }
 
