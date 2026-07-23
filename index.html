@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accelerated Academy Employee Training</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <style>
         :root {
             color-scheme: light;
@@ -255,10 +257,8 @@
         }
 
         .highlight {
-            background: #fef3c7;
-            padding: 2px 6px;
-            border-radius: 2px;
-            font-weight: 500;
+            font-weight: 600;
+            color: var(--primary);
         }
 
         /* QUIZ STYLES */
@@ -394,9 +394,9 @@
         <div class="nav-tabs">
             <button class="nav-btn active" data-tab="mission">Mission & Culture</button>
             <button class="nav-btn" data-tab="program">Course Overview</button>
-            <button class="nav-btn" data-tab="niche">Our Offer</button>
-            <button class="nav-btn" data-tab="roles">Roles & Responsibilities</button>
-            <button class="nav-btn" data-tab="framework">Sales Framework</button>
+            <button class="nav-btn" data-tab="framework">Sales Framework & Offer</button>
+            <button class="nav-btn" data-tab="enrollment">Enrollment</button>
+            <button class="nav-btn" data-tab="states">State Requirements</button>
             <button class="nav-btn" data-tab="data">Salesforce Data</button>
             <button class="nav-btn" data-tab="sops">SOPs</button>
             <button class="nav-btn" data-tab="terms">Terminology</button>
@@ -602,21 +602,168 @@
                     <p>Industry-leading completion rate</p>
                 </div>
             </div>
+
+            <h3>Online Learning Component</h3>
+            <div class="info-box">
+                <strong>Platform:</strong> Canvas (self-paced learning)<br>
+                <strong>Format:</strong> Reading materials, knowledge checks, weekly module quizzes<br>
+                <strong>Time Commitment:</strong> Varies by week (typically 4 hours/week as a general guideline, but some weeks are heavier than others based on content complexity)
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Week 2 (Dental Anatomy) and weeks with radiography content have more material</li>
+                    <li>Later modules may take around 1 hour per week</li>
+                    <li>Students can complete all work the day before assignments are due—no need to log in daily</li>
+                </ul>
+            </div>
+
+            <h3>Weekly Learning Structure</h3>
+            <p>Each week follows this pattern:</p>
+            <div class="info-box">
+                <strong>1. Learning Material (Online)</strong> → <strong>2. Knowledge Check (Online)</strong> → <strong>3. Skill Check (In-Person)</strong>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Students must score <strong>100% on Knowledge Checks</strong> to advance to next section</li>
+                    <li>Students must score <strong>100% on Weekly Module Quizzes</strong></li>
+                    <li>Skill Check requires <strong>access code from instructor</strong> (provided only if student attends clinic)</li>
+                </ul>
+            </div>
+
+            <h3>Weekly Responsibilities</h3>
+            <div class="info-box warning">
+                <strong>Students MUST:</strong>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ Read modules & complete online coursework</li>
+                    <li>✅ Score 100% on Knowledge Checks to advance</li>
+                    <li>✅ Score 100% on Weekly Module Quizzes</li>
+                    <li>✅ Attend In-Person Clinic Each Week</li>
+                    <li>✅ Complete Clinic Skill Check (via instructor-provided code)</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>🚨 Important:</strong> No Skill Check access = No clinic attendance allowed</p>
+            </div>
+
+            <h3>10-Week Course Schedule</h3>
+            <table>
+                <tr>
+                    <th>Week</th>
+                    <th>Online Module</th>
+                    <th>In-Person Clinical Session</th>
+                </tr>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td>Orientation & CPR/BLS</td>
+                    <td>Course Kickoff: Orientation & CPR Certification</td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>Intro to Dental Assisting, Anatomy & Sterilization</td>
+                    <td>Basic Chairside Skills, Sterilization & Disinfection</td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>Dental X-Rays</td>
+                    <td>Radiography Techniques & Equipment Assembly</td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>Impressions</td>
+                    <td>Impression & Scanning Techniques</td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td>Dental Decay & Restorative Procedures</td>
+                    <td>Composite Procedures, Matrix Assembly, Full-Mouth X-Rays</td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td>Crowns & Restorative Procedures</td>
+                    <td>Crown & Bridge Procedures, Temp Crown Fabrication <span style="color: var(--danger);">⭐ CRITICAL</span></td>
+                </tr>
+                <tr>
+                    <td><strong>7</strong></td>
+                    <td>Types of Dentistry</td>
+                    <td>Root Canal Procedures, Patient Care Techniques</td>
+                </tr>
+                <tr>
+                    <td><strong>8</strong></td>
+                    <td>Advanced Dental Procedures</td>
+                    <td>Oral Surgery, Prosthetics, Radiographic Techniques</td>
+                </tr>
+                <tr>
+                    <td><strong>9</strong></td>
+                    <td>Dental Office Fundamentals</td>
+                    <td>Patient Intake, Instrument ID, Radiography Efficiency</td>
+                </tr>
+                <tr>
+                    <td><strong>10</strong></td>
+                    <td>Review & Final Exam</td>
+                    <td>Final Practical Exam & Course Celebration <span style="color: var(--danger);">⭐ CRITICAL</span></td>
+                </tr>
+            </table>
+
+            <h3>Critical Classes ⭐</h3>
+            <div class="info-box danger">
+                <strong>These classes are essential and attendance is mandatory:</strong>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Class 1:</strong> CPR (Orientation)</li>
+                    <li><strong>Class 6:</strong> Radiography Practical</li>
+                    <li><strong>Class 10:</strong> Final Practical Exam</li>
+                </ul>
+            </div>
+
+            <h3>Exams & Makeup Policies</h3>
+            <div class="card">
+                <h4>Online Exams</h4>
+                <p><strong>No makeups available.</strong> Students have a 4-day window to complete the exam. Online exams include: X-Ray exam, Midterm, Final exam.</p>
+            </div>
+            <div class="card">
+                <h4>In-Person Practical Exams</h4>
+                <p><strong>1-week makeup window only.</strong> Applies to: Radiography Practical (Class 6) and Final Practical (Class 10). Student must contact instructor to arrange makeup.</p>
+            </div>
+            <div class="card">
+                <h4>Makeup Assignments</h4>
+                <p>Students must complete the previous module before moving forward. Makeup assignments are only worth 2 points each. No makeup work accepted after Week 9.</p>
+            </div>
+
+            <h3>Grading Breakdown</h3>
+            <div class="info-box">
+                <strong>Passing Requirements:</strong> Students must have BOTH:
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>✅ <strong>70% or higher</strong> in coursework and exams</li>
+                    <li>✅ <strong>Meet attendance requirements</strong> (see below)</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Grading Weights:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>10% - Online Weekly Assignments</li>
+                    <li>25% - Online Exams (X-Ray, Midterm, Final)</li>
+                    <li>35% - Clinic Practical Exams (2-3 exams)</li>
+                    <li>20% - Clinic Participation</li>
+                    <li>10% - Job Shadowing (16 required hours out of 55)</li>
+                </ul>
+            </div>
+
+            <h3>Attendance Requirements</h3>
+            <div class="info-box warning">
+                <strong>Minimum Attendance:</strong> 32 out of 40 hours (cannot miss more than 8 hours)
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Each clinic day = 4 hours</li>
+                    <li>Arriving late or leaving early counts against hours</li>
+                    <li>If you miss 2 full days (8 hours) + even 1 hour more, you fail attendance</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>🚨 Critical:</strong> If a student fails attendance, they FAIL the entire course. Students do not need to contact instructor for absences—there is no rescheduling of clinic sessions unless it's for a practical exam.</p>
+            </div>
+
+            <h3>Job Shadowing</h3>
+            <div class="card">
+                <p><strong>Requirement:</strong> 16 hours out of 55 required<br>
+                <strong>Grade Impact:</strong> Counts for 10% of final grade</p>
+            </div>
+
         </div>
 
-        <!-- OUR OFFER -->
-        <div id="niche" class="section">
+        <!-- SALES FRAMEWORK & OFFER -->
+        <div id="framework" class="section">
             <h2>Our Offer: Affordable, Achievable, Convenient</h2>
 
             <h3>Who We Serve</h3>
-            <div class="info-box">
-                People who want a new, respected medical career but don't have:
-                <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>The financial means for 4-year college</li>
-                    <li>The time for traditional 8-month+ programs</li>
-                    <li>But who ARE determined to improve their lives</li>
-                </ul>
-            </div>
+            <p>People who want a new, respected medical career but don't have the financial means for 4-year college, the time for traditional 8-month+ programs, but who ARE determined to improve their lives.</p>
 
             <h3>Target Audience & Dream Outcome</h3>
             <div class="grid-2">
@@ -664,121 +811,21 @@
             <div class="info-box warning">
                 <strong>Note on Certification:</strong> Not every state graduates students with all certifications. Some states require graduates to apply for their RDA (Registered Dental Assistant) or complete supplemental steps. Our program provides comprehensive preparation for these next steps.
             </div>
-        </div>
 
-        <!-- ROLES & RESPONSIBILITIES -->
-        <div id="roles" class="section">
-            <h2>Roles & Responsibilities</h2>
+            <hr style="margin: 30px 0; border: none; border-top: 2px solid var(--border);">
 
-            <h3>Admissions Representative Role</h3>
-            <div class="info-box">
-                An Admissions Representative is a B2C sales professional and a key driver of the company's revenue. Their role blends consultative selling with student support—guiding prospective students through the decision to invest in their education while representing Accelerated Academy's mission and values.
-            </div>
-
-            <h3>Core Responsibilities</h3>
-            <ul style="margin-left: 20px;">
-                <li>Meet KPIs</li>
-                <li>Answer incoming lead phone calls</li>
-                <li>Implement lead nurturing systems</li>
-                <li>Track all lead interactions in Salesforce</li>
-                <li>Enroll students for our courses</li>
-            </ul>
-
-            <h3>Ideal Candidate Qualifications</h3>
-            <div class="value-section">
-                <div class="value-item">
-                    <strong>1. Embodies Accelerated Academy's 5 Core Values</strong>
-                </div>
-                <div class="value-item">
-                    <strong>2. Competitive & Goal-Oriented</strong>
-                    <em>Motivated by achieving measurable results</em>
-                </div>
-                <div class="value-item">
-                    <strong>3. Strong Communicator</strong>
-                    <em>Confident and professional on phone, text, and email</em>
-                </div>
-                <div class="value-item">
-                    <strong>4. Relational</strong>
-                    <em>Enjoys connecting with others, building trust, and asking the right questions</em>
-                </div>
-                <div class="value-item">
-                    <strong>5. Resilient & Driven</strong>
-                    <em>Pushes through challenges and objections with optimism</em>
-                </div>
-                <div class="value-item">
-                    <strong>6. Disciplined & Organized</strong>
-                    <em>Manages time and tasks with focus and consistency</em>
-                </div>
-                <div class="value-item">
-                    <strong>7. Team-Oriented</strong>
-                    <em>Contributes to both individual and group success</em>
-                </div>
-            </div>
-
-            <h3>Setter (First Point of Contact)</h3>
-            <div class="info-box">
-                The Setter acts as the <strong>first point of contact for all new and re-engaged leads</strong>. Their primary goal is to build rapport, answer questions, and move prospects forward through scheduling qualified calls for Closers.
-            </div>
-
-            <h4>Core Responsibilities</h4>
-            <ul style="margin-left: 20px;">
-                <li>Respond to new leads quickly via text</li>
-                <li>Conduct intro + discovery conversations</li>
-                <li>Nurture leads and schedule qualified calls for Closers</li>
-                <li>Accurately log activity, statuses, and nurture leads in Salesforce</li>
-                <li>Support Closers with scheduling and administrative tasks</li>
-            </ul>
-
-            <h4>Key Performance Indicators (KPIs)</h4>
-            <ul style="margin-left: 20px;">
-                <li>Qualified calls scheduled</li>
-                <li>Median lead response time</li>
-                <li>% reduction in "No Contact" leads</li>
-                <li>Lead touch & follow-up consistency</li>
-            </ul>
-
-            <h3>Closer (Sales Conversion)</h3>
-            <div class="info-box">
-                The Closer is responsible for converting scheduled calls into enrolled students by leading high-quality sales conversations that include detailed discovery, clear offer presentation, objection resolution, and confident decision-making.
-            </div>
-
-            <h4>Core Responsibilities</h4>
-            <ul style="margin-left: 20px;">
-                <li>Answer and manage inbound calls</li>
-                <li>Lead full sales conversations: intro → discovery → offer → close</li>
-                <li>Handle objections and guide prospects to confident decisions</li>
-                <li>Execute strategic follow-up and nurturing for leads</li>
-                <li>Confirm close and support students through enrollment</li>
-            </ul>
-
-            <h4>Key Performance Indicators (KPIs)</h4>
-            <ul style="margin-left: 20px;">
-                <li>Enrollment rate (per scheduled call)</li>
-                <li>Overall conversion rate</li>
-                <li>Inbound call answer rate</li>
-                <li>Outbound call activity</li>
-                <li>Conversation quality & objection handling</li>
-            </ul>
-        </div>
-
-        <!-- SALES FRAMEWORK -->
-        <div id="framework" class="section">
             <h2>Sales Framework & Call Structure</h2>
 
             <h3>The Sales Playbook: Setter → Closer Pipeline</h3>
-            <div class="info-box">
-                Our sales framework is built on a two-tier system designed to move leads efficiently from initial contact through enrollment:
-                <ol style="margin-left: 20px; margin-top: 10px;">
-                    <li><strong>SETTER</strong> — First point of contact. Builds rapport, qualifies leads, schedules calls.</li>
-                    <li><strong>CLOSER</strong> — Converts calls to enrollments. Leads full sales conversations with discovery → offer → close.</li>
-                </ol>
-            </div>
+            <p>Our sales framework is built on a two-tier system designed to move leads efficiently from initial contact through enrollment:</p>
+            <ol style="margin-left: 20px;">
+                <li><strong>SETTER</strong> — First point of contact. Builds rapport, qualifies leads, schedules calls.</li>
+                <li><strong>CLOSER</strong> — Converts calls to enrollments. Leads full sales conversations with discovery → offer → close.</li>
+            </ol>
 
             <h3>Sales Process Flow</h3>
-            <div class="card">
-                <p><strong>Intro → Discovery → Offer → Close</strong></p>
-                <p style="margin-top: 10px; font-size: 13px;">Every sales conversation follows this sequence. The Setter handles intro/initial discovery. The Closer handles full discovery, offer presentation, objection resolution, and closing.</p>
-            </div>
+            <p><strong>Intro → Discovery → Offer → Close</strong></p>
+            <p style="margin-top: 10px; font-size: 14px;">Every sales conversation follows this sequence. The Setter handles intro/initial discovery. The Closer handles full discovery, offer presentation, objection resolution, and closing.</p>
 
             <h3>8-Step Call Framework</h3>
             <ol style="margin-left: 20px;">
@@ -841,6 +888,1746 @@
                 <p>Keep them engaged right away</p>
             </div>
         </div>
+
+        <!-- ENROLLMENT -->
+        <div id="enrollment" class="section">
+            <h2>Enrollment Information</h2>
+
+            <h3>Enrollment Steps</h3>
+            <div class="info-box">
+                <strong>How Students Enroll:</strong>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Start Application</strong> — Go to acceleratedacademy.us → Find a Course → Enter zip code → Select term/session</li>
+                    <li><strong>Add Proof of Education</strong> — Upload picture of diploma or transcript</li>
+                    <li><strong>Get Approved</strong> — After "Congrats, you qualify" message</li>
+                    <li><strong>Build Payment Plan</strong> — Choose payment structure (full pay or installments)</li>
+                    <li><strong>Make Deposit</strong> — $200 deposit required to reserve seat</li>
+                    <li><strong>Complete Enrollment</strong> — Sign enrollment agreement and receive class details</li>
+                </ol>
+            </div>
+
+            <h3>Payment Plan Options</h3>
+
+            <div class="card">
+                <h4>Pay in Full</h4>
+                <p><strong>Discount:</strong> $300 off total tuition<br>
+                <strong>Best for:</strong> Students who have the full amount available</p>
+            </div>
+
+            <div class="card">
+                <h4>Payment Plan (Weekly or Biweekly)</h4>
+                <p><strong>Down Payment:</strong> $200 deposit required<br>
+                <strong>Payment Frequency:</strong> Choose weekly OR biweekly installments<br>
+                <strong>Interest:</strong> Interest-free<br>
+                <strong>Timeline:</strong> All payment plans structured to be paid off by the last day of class<br>
+                <strong>Key Benefit:</strong> <span class="highlight">Students graduate debt-free</span> — this is our biggest reason for structuring payment plans this way</p>
+            </div>
+
+            <h3>Payment Plan Code Setup (SOPs)</h3>
+            <div class="info-box warning">
+                <strong>When to Create a Payment Plan Code:</strong>
+                <p style="margin-top: 10px;">After a lead has verbally committed to enrolling and you've discussed their payment structure, create a custom payment plan code in Salesforce before sending them the enrollment link.</p>
+                <p style="margin-top: 10px;"><strong>Steps:</strong></p>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Determine deposit amount (usually $200)</li>
+                    <li>Determine payment frequency (weekly or biweekly)</li>
+                    <li>Calculate individual payment amounts based on tuition and timeline</li>
+                    <li>Create code in Salesforce that matches these parameters</li>
+                    <li>Share code with lead so they get the correct plan at enrollment</li>
+                </ol>
+            </div>
+
+            <h3>Post-Enrollment Support</h3>
+            <div class="info-box">
+                <strong>If students have questions about their class after enrollment:</strong><br>
+                They should contact <strong>Student Support</strong>
+                <p style="margin-top: 10px;"><em>Note: Student Support contact information is available in Salesforce under the "Student Support Contact Info" text template</em></p>
+            </div>
+
+            <h3>Withdraw Process</h3>
+            <div class="info-box warning">
+                <strong>Status: TBD</strong><br>
+                <p style="margin-top: 10px;">Withdraw process and procedures are currently being developed. Reference this section for updates.</p>
+            </div>
+        </div>
+
+        <!-- STATE REQUIREMENTS -->
+        <div id="states" class="section">
+            <h2>State Requirements</h2>
+
+            <div style="margin-bottom: 25px;">
+                <input type="text" id="state-search" placeholder="🔍 Search within current state..." style="width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: 6px; font-size: 14px;">
+            </div>
+
+            <div class="nav-tabs" style="margin-bottom: 20px;">
+                <button class="state-btn active" data-state="alabama">Alabama</button>
+                <button class="state-btn" data-state="arizona">Arizona</button>
+                <button class="state-btn" data-state="arkansas">Arkansas</button>
+                <button class="state-btn" data-state="florida">Florida</button>
+                <button class="state-btn" data-state="georgia">Georgia</button>
+                <button class="state-btn" data-state="idaho">Idaho</button>
+                <button class="state-btn" data-state="illinois">Illinois</button>
+                <button class="state-btn" data-state="indiana">Indiana</button>
+                <button class="state-btn" data-state="kansas">Kansas</button>
+                <button class="state-btn" data-state="kentucky">Kentucky</button>
+                <button class="state-btn" data-state="louisiana">Louisiana</button>
+                <button class="state-btn" data-state="michigan">Michigan</button>
+                <button class="state-btn" data-state="mississippi">Mississippi</button>
+                <button class="state-btn" data-state="missouri">Missouri</button>
+                <button class="state-btn" data-state="nevada">Nevada</button>
+                <button class="state-btn" data-state="north-carolina">North Carolina</button>
+                <button class="state-btn" data-state="ohio">Ohio</button>
+                <button class="state-btn" data-state="oklahoma">Oklahoma</button>
+                <button class="state-btn" data-state="south-carolina">South Carolina</button>
+                <button class="state-btn" data-state="texas">Texas</button>
+                <button class="state-btn" data-state="virginia">Virginia</button>
+                <button class="state-btn" data-state="washington">Washington</button>
+                <button class="state-btn" data-state="wisconsin">Wisconsin</button>
+            </div>
+
+            <!-- ALABAMA -->
+            <div id="state-alabama" class="state-content active">
+                <h3>Alabama</h3>
+                <div id="map-alabama" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter only (diploma NOT required)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + must graduate within 6 months from course end date</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Alabama Community College System (334-293-4500)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS Certification, Certificate of Radiology Training</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours) for a dentist, then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$37,720/year ($17.37/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em>After 2 years of work, graduates can apply straight into hygiene without prerequisites. <span class="highlight">Graduates as 1-level Dental Assistant</span></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting, Bird & Robinson (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARIZONA -->
+            <div id="state-arizona" class="state-content">
+                <h3>Arizona</h3>
+                <div id="map-arizona" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + current transcript</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Yuma, Tucson</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Arizona State Board for Private Postsecondary Education (602-542-5709, www.azppse.gov)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Entrance Interview (within 14 days of enrollment). Can use Wonderlic (must graduate within 6 months)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS. NOTE: Do NOT receive radiology certificate from us. Must take RHS exam separately ($270)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$44,610/year ($22.11/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Radiology Certification</strong>
+                        <em>RHS Exam - $270 (can be taken before or after AA course). This is required to take x-rays in Arizona.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant + Qualified in Coronal Polishing/EFDA</span>. Located near California — can work in CA but will need additional CA-specific classes. Felon eligibility: student must call State Board</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), RHS Exam ($270)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARKANSAS -->
+            <div id="state-arkansas" class="state-content">
+                <h3>Arkansas</h3>
+                <div id="map-arkansas" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter only (diploma NOT required)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + must graduate within 6 months from course end date</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Conway, Springdale (Fayetteville COA), Fort Smith, Hot Springs (FRIDAY CLASSES), Jonesboro, Maumelle</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Arkansas State Board of Career Education (501-682-2085)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>NO Wonderlic</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, Certificate of Radiology Training. Student must apply for Registered DA (we help)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$36,570/year ($17.47/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: RDA Application</strong>
+                        <em>RDA Application Fee - $4 + must pass jurisprudence exam within 30 days of receiving email from dental board (this must be done after completing AA course)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em>After graduating and receiving AR Radiology Certificate, holds permit for expanded functions: coronal polishing, operating radiographic equipment, monitoring nitrous oxide/oxygen analgesia, monitoring patients under deep sedation/general anesthesia. <span class="highlight">Graduates as Dental Assistant</span></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), State Registration ($4), Nitrous Oxide ($100, optional — offered during Saturday class)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLORIDA -->
+            <div id="state-florida" class="state-content">
+                <h3>Florida</h3>
+                <div id="map-florida" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Wonderlic</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + must graduate within 6 months from course end date</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Tampa, Tallahassee, Jacksonville (1 HR AHEAD)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Florida Dept. of Health & Education (850-488-4222, 850-245-5084)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Entry Level Dental Assisting with Expanded Functions Certificate, CPR/BLS, Entry Level Dental Assisting with Expanded Functions Radiology Certificate</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$42,650/year ($20.51/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Must become EFDA to take x-rays</span> (we set them up to obtain after graduation). EFDA requires: complete our course, work 3 months under dentist, submit state application ($35), submit certificates to FL Board (must complete within 12 months or retake our radiology course). <span class="highlight">Graduates as Dental Assistant</span></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Register for Florida Dental Radiographer Certification</strong>
+                        <em>$35 (must be done after completing AA course)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), State Application ($35)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GEORGIA -->
+            <div id="state-georgia" class="state-content">
+                <h3>Georgia</h3>
+                <div id="map-georgia" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Athens, Macon, Newnan (Peachtree City), Cleveland, Marietta, Evans</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Georgia Nonpublic Postsecondary Education Commission (770-414-3300)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Can use Wonderlic</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, Certificate of Radiology Training</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$41,160/year ($19.79/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant. Can pursue Expanded Duty DA (EDDA)</span> — requires 6 months work experience + coronal polishing course in Kennesaw. SC students can take xray safety prep course ($139) and exam ($270). Graduates from SC location can work in SC and take xrays after 3 months + RHS exam (no time window).</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IDAHO -->
+            <div id="state-idaho" class="state-content">
+                <h3>Idaho</h3>
+                <div id="map-idaho" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + current transcript</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Boise</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Idaho State Board of Education - Proprietary Schools (20833215872)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Can use Wonderlic. Criminal history okay—no board registration required</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, Radiology Certification</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$38,840/year ($18.68/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> NO radiography requirements—all DAs can legally operate dental xray equipment and perform radiographic procedures</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ILLINOIS -->
+            <div id="state-illinois" class="state-content">
+                <h3>Illinois</h3>
+                <div id="map-illinois" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Effingham (no summer classes), Naperville, Bloomington, Belvidere, Champaign, Alsip, Mundelein</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Division of Private Business and Vocational Schools — Illinois Board of Higher Education (217-782-2551)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Can use Wonderlic</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, Radiology Certification</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$41,290/year ($19.85/hr); Naperville: $20.35/hr — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant. Expanded Functions (EDDA)</span> — Requires 2,000+ hours work + extra training (continuing ed, CODA program, coronal scaling, intracoronal temporization). Peoria location is inactive</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Notes</strong>
+                        <em>ADAA IL Stats: 24 enrolled (July 2021–June 2022), 15 graduated, 60% used career services to find jobs, average pay $34,000/yr</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INDIANA -->
+            <div id="state-indiana" class="state-content">
+                <h3>Indiana</h3>
+                <div id="map-indiana" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>18 (can enroll at 17 if will turn 18 by course end)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR GED (Counselor Letter NOT accepted)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>NA - Can enroll if will turn 18 by course end + Diploma OR GED</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Lafayette (1 HR ahead), South Bend (1 HR ahead), Evansville (Central), Bloomington (Central), Kokomo (1 HR ahead)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Indiana DWD Office of Career and Technical Services (1-800-891-6499)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>MUST have SSN (not ITIN). NO Wonderlic. Misdemeanors okay</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, Radiology Certification. CUT ENROLLMENT OFF 2 WEEKS EARLY for provisional permit mailing</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$43,920/year ($21.96/hr) — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">6-month provisional radiology permit required.</span> Students must: (1) Enroll in ISDH-approved radiology course, (2) Acquire 6-month provisional permit, (3) Complete application + graduate, (4) Sit for DANB RHS exam (included in tuition), (5) Apply to ISDH for radiology license. Board is firm on 1-time permit—student must reach out if previously obtained. Job shadowing no longer required. Expanded Functions: Coronal Polishing (1 yr work + course), Medicaments (1 yr + course), Nitrous (1 yr or CODA graduate)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: RHS Exam and Radiology License Registration</strong>
+                        <em>RHS Exam - $270, then register for Radiology license with Indiana Dept of Health $60 (both done after AA course). Note: We get them their provisional permit that allows them to take x-rays while in our program</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANSAS -->
+            <div id="state-kansas" class="state-content">
+                <h3>Kansas</h3>
+                <div id="map-kansas" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>Not specified</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Not specified</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Not specified</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Salina, Wichita, Shawnee</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Kansas Board of Education</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$37,830/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> DAs classified as nonlicensed persons. Expanded Functions: Coronal Polishing, Coronal Scaling, Nitrous Oxide. To obtain Nitrous: Enroll in Sedation Consult LLC course ($225 exam), complete 9 modules (1 hr each), attend completion class + Zoom call with Dr. Schwartz, take final exam with proctor</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KENTUCKY -->
+            <div id="state-kentucky" class="state-content">
+                <h3>Kentucky</h3>
+                <div id="map-kentucky" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + current transcript (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Bowling Green (Central), Louisville (1 HR ahead), Somerset (1 HR ahead)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS, 6-hour board-approved radiology course</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant (RDA if pass radiology).</span> Pass radiology, get hired, register with state for RDA qualified in radiography. RDA can work without Coronal Polishing/IV Placement if dentist attests. If they have these certs, different level applies. Expanded functions not recognized in state but options available</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOUISIANA -->
+            <div id="state-louisiana" class="state-content">
+                <h3>Louisiana</h3>
+                <div id="map-louisiana" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter OR Wonderlic</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Baton Rouge, Denham Springs, Hammond, Lafayette, Lake Charles, Slidell, Monroe, Houma, Metairie</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Louisiana Board of Regents (225-342-4253). Radiography: Louisiana State Board of Dentistry (225-219-7330)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS, Radiology Certificate. EDDA: Work 6 months + approved course through University of Louisiana at Monroe or Southern University at Shreveport, pass & submit to LA Board for EDDA certification</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> Slidell location: Previous info stated could work in MS without additional steps (no longer true)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MICHIGAN -->
+            <div id="state-michigan" class="state-content">
+                <h3>Michigan</h3>
+                <div id="map-michigan" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>18 (can enroll at 17 if will turn 18 by course end)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter only (diploma NOT required)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Hudsonville, Westland, Lake Orion, Grand Rapids (Walker)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Michigan Department of Licensing and Regulatory Affairs (517-335-9700)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Dental Assisting Certificate, CPR/BLS. Radiology: Students work with licensed dentist during course + participate in 2-hour participation day (outside class, supervised by hosting office). MDA portal course included in tuition, taken during class</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$24,040/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Unregistered Dental Assistant.</span> All RDAs must have CODA-accredited degree/certificate. Students obtain Michigan Dental Association radiography training during/after course. Must sign up for available 2-hour participation slots</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: MDA Radiology Certification</strong>
+                        <em>Must pass MDA Radiology Certification - $325. This is done while taking our course, and the fee is included in their tuition. They must complete MDA online modules and pass a radiology skill check-off with the dentist. No extra steps after graduation.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MISSISSIPPI -->
+            <div id="state-mississippi" class="state-content">
+                <h3>Mississippi</h3>
+                <div id="map-mississippi" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter OR Wonderlic (diploma NOT required)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Forest, Richland, Madison, Hattiesburg, Olive Branch, Tupelo, Brookhaven, Gulfport, New Albany</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>State of MS Commission on Proprietary School and College Registration (601-432-6185). Radiography: MS State Board of Dental Examiners (601-944-9622)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS, Radiology Certificate. Must apply to state for Radiology Permit (90 days from Class 2 completion)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$36,960/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">CANNOT MISS CLASS 2.</span> Class 2 = licensed/approved radiology course in MS ($350). Must attend to apply for radiology permit. <span class="highlight">Graduates as Dental Assistant.</span> Previous info on Slidell students working in MS without additional steps is questionable</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Radiology Permit Application</strong>
+                        <em>Radiology Permit application must be in dental board's office no later than 90 days after graduation. $60 fee. Note: If a student is attending outside of MS but lives/wants to work in MS, they must take a radiology seminar through another institution (costs around $350).</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>State Registration ($65–$75), Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Notes</strong>
+                        <em>Keith update: CPSCR Institution Disclosure Form required at enrollment (currently signed on Class 1)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MISSOURI -->
+            <div id="state-missouri" class="state-content">
+                <h3>Missouri</h3>
+                <div id="map-missouri" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Kennett, Washington, St. Louis, Kansas City, Lee's Summit, Columbia</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Missouri Department of Higher Education (573-751-2361)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS. NO Radiology Certification (all DAs may legally operate xray equipment)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($450)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$42,260/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> EDDA: Hold expanded functions permit from MO Dental Board. To earn: (1) Pass MO Test of Basic Dental Assisting Skills + MO Board-approved EFDA course, (2) Hold current CPR/BLS, (3) Submit application to MO Dental Board. Note: Kennett location previously could work in AR without additional steps (NOT true anymore)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Optional MO Dental Assisting Skills Exam</strong>
+                        <em>Optional to level up credentials - MO Dental Assisting Skills Exam through DANB $240 (can take during or after AA course)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEVADA -->
+            <div id="state-nevada" class="state-content">
+                <h3>Nevada</h3>
+                <div id="map-nevada" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript (Counselor Letter NOT accepted)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>NA - Can't enroll HS students</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Sparks, Las Vegas</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>NV Department of Employment, Training, and Rehab - Commission on Postsecondary Education</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Not very picky on criminal history (double-check if violent or drug-related). EPP must stay under 12 months</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS (renew 2 yrs), Radiography Certificate (helpful for job hunting). Note: No state board certificate for DAs—dentist adds employee to license renewal with statement of radiography qualification</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$41,240/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> Sparks VERY close to California—can work in CA but will need additional CA-specific classes soon after. Not advantageous to take NV program if planning to work in CA</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NORTH CAROLINA -->
+            <div id="state-north-carolina" class="state-content">
+                <h3>North Carolina</h3>
+                <div id="map-north-carolina" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17 (parent/guardian must sign if 17)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Transcript showing graduation date (diplomas NOT accepted)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Transcript showing graduation date + Wonderlic (verbal 303/500, math 294/500) + within 6 months of course end</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Boone (no summer), Cary, Greensboro, Concord, Raleigh, Hendersonville, Hickory, Gastonia, Rocky Mount, Fayetteville, Wilmington</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>NC Community Colleges Office of Proprietary Schools (919-807-7100). Radiography: NC Board of Dental Examiners (919-678-8223)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS (renew 2 yrs), Radiology Certificate (separate exam—must score 80% to receive)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$45,650/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as DA II IN TRAINING (DA I).</span> Automatically become DA II after 2 years work (3,000 hours). Need 70% in class + attendance + pass Class 10 radiology exam (80%) to become DA II in Training. Can still graduate even if radiology fails (no radiology cert). Students approved to take radiographs despite being DA I</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Radiology Certification Requirements</strong>
+                        <em>Must score 80% or higher on online x-ray exam and x-ray practical exam to get radiology certificate. If they fail either one, they must take it at another school as a stand-alone course.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OHIO -->
+            <div id="state-ohio" class="state-content">
+                <h3>Ohio</h3>
+                <div id="map-ohio" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + recent transcript (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Tipp City, Bedford, Akron (prev. Canton), Columbus, Warren, Strongsville</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>State Board of Career Colleges and Schools (OH). Regulated by state</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Students must watch OH disclosure video before enrolling. 2-hour participation day must be completed between weeks 5–10 (failure = student completes RDA application independently). Misdemeanor/Felony: contact board</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS. Radiology: Must complete OSDB radiology course (RHS prep course is independent—student responsible). We provide clinical training + 2 hours participation, sign-off confirming awareness & participation</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$46,860/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant (also receive OH Radiology Certificate once completing additional course).</span> EFDA: Complete our program, complete OH Board-approved EFDA training, pass EFDA exam, complete BLS training, apply to OH State Dental Board. Cannot offer referral gifts</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: State Certification as Dental X-Ray Machine Operator</strong>
+                        <em>DAs must be state-certified. Complete Dale Foundation's RHS Review Course (75% minimum) - $130, then $40 processing fee to DALE Foundation, THEN apply with the board - $32</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OKLAHOMA -->
+            <div id="state-oklahoma" class="state-content">
+                <h3>Oklahoma</h3>
+                <div id="map-oklahoma" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Counselor Letter OR Wonderlic</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Edmond, Lawton, Norman, Broken Arrow, Stillwater</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Oklahoma Board of Private Vocational Schools (405-528-3370)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS, Radiology Training</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation Radiology Process</strong>
+                        <em><span class="highlight">All Oklahoma DAs must complete a permit and radiology certification process</span> to work with x-rays:
+                        <br><strong>1. Dental Assistant Permit - $50</strong> Apply through Oklahoma Dental Board: https://oklahoma.gov/dentistry/applications-forms/dental-assistants.html
+                        <br><strong>2. Radiation Safety Course - $150</strong> Take self-paced online course through Oklahoma Dental Foundation: https://www.pathlms.com/okdf/courses/97329
+                        <br><strong>3. Pass the test</strong> - If they fail, they pay to re-take
+                        <br><strong>4. Timeline</strong> - Once student passes, ODF automatically notifies ODB. Within 6 weeks, student receives new permit with Radiology Certification added. <strong>Students cannot take x-rays until they receive the new permit.</strong>
+                        <br>Students can do permit + course during or after AA. Encourage them to complete before starting work—having the permit + radiology endorsement helps significantly with job hunting.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Expanded Functions Available</strong>
+                        <em>Students can take additional classes through OK Dental Foundation for Nitrous Oxide, Infection Control, Coronal Polishing, Sealants, etc. Some require 1+ year of work experience first.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> ODF automatically sends test scores and fees to ODB—student doesn't have to do anything beyond completing the course.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), Permit w/ OK Dental Board ($50), Radiation Safety Course ($150)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOUTH CAROLINA -->
+            <div id="state-south-carolina" class="state-content">
+                <h3>South Carolina</h3>
+                <div id="map-south-carolina" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript (must have graduated)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>NA - Can't enroll HS students</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Columbia, Greenville</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>South Carolina Commission on Higher Education (803-737-2260)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>Completion Certificate, CPR/BLS. NOTE: NO radiology from us—must take separate SC Xray Safety Certification Course (not included in tuition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> To legally take x-rays, must take separate online SC Board-approved course (recommend Dr. Rick Waters course—$199, online, 4 hours, self-paced, approved by SC Board). Can graduate without it but won't be able to take x-rays. EDDA: Work 2 yrs + SC Xray course (required). Students Directed to Rick Waters for radiology (better than old Dale Foundation)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Radiation Safety Course</strong>
+                        <em>Radiation Safety Course - $199 (can take during or after AA course). Note: This is required to legally take x-rays in SC</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), SC Xray Safety Course ($199)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Notes</strong>
+                        <em>SC requires Hold Harmless Agreement (added to Student Disclaimer)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEXAS -->
+            <div id="state-texas" class="state-content">
+                <h3>Texas</h3>
+                <div id="map-texas" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript (Counselor Letter NOT accepted)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>NA - Can't enroll HS students</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Frisco, Hurst, College Station, South Austin, North Austin, Midland, New Braunsfels, Pasadena, El Paso (1 HR behind)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Texas Workforce Commission Career Schools and Colleges (512-936-3100)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special Requirements</strong>
+                        <em>Students NOT enrolled until enrollment packet signed (2-week window). Can't withdraw until packet signed. Can't miss more than 2.5 days of class. Must receive 75% on attendance. Tour: on Class 1 (or first day of attendance)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$39,170/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span> After Class 5: enroll in RDA program through UT Health San Antonio (1 month to complete), take online Human Trafficking Prevention course + submit proof, fill out state registration/pay fee ($95), submit fingerprints + RDA application to state. Once complete, considered RDA in TX</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: RDA Course, Human Trafficking Course, and Registration</strong>
+                        <em>RDA Course/Exam - $95, Human Trafficking Course - Free, DA Registration Application, Fingerprints & Background Check. Important: If student has felony, they must go through the board process and wait for their decision. If they can't get RDA due to criminal history, there's no point in taking the course.</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional), TX CSC005 Receipt of Enrollment Policies, TX CSC010 Record of Previous Education, State registration ($95)</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIRGINIA -->
+            <div id="state-virginia" class="state-content">
+                <h3>Virginia</h3>
+                <div id="map-virginia" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17 (parent/guardian must sign if 17)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript (Counselor Letter NOT accepted, Wonderlic NOT allowed)</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>NA - Can't enroll HS students</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Roanoke, Lynchburg, Bridgewater, Henrico, Newport News, Vienna, Centreville, Fredericksburg</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>SCHEV (State Council of Higher Education of Virginia, schev.edu, 804-225-2600). DA2 registration: Virginia Board of Dentistry (804-367-4400, dhp.virginia.edu)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS, Radiology (VWCC Radiation Health-Safety Course = state requirement—taken online during week as homework)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$44,980/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CRITICAL: VWCC Radiology Requirement</strong>
+                        <em><span class="highlight">ALL Virginia students MUST take and pass the VWCC (Virginia Western Community College) Dental Radiation Training Course</span> with a 75% or higher BEFORE the end of the AA course, or they will NOT graduate from Accelerated Academy. The cost is INCLUDED in tuition. This is NOT the Dale Foundation course. Students NOT living in VA but wanting to work in VA can take VWCC separately outside our program. <strong>This is a common source of student frustration in orientation—set expectations early.</strong></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Attendance & Makeup Policy</strong>
+                        <em>Students MUST attend 80 clock hours total. <span class="highlight">Any student who misses any hours must attend the after-clinic makeup day to make up those hours or they WILL NOT graduate.</span> If a student exceeds 8 hours missed, they fail the course. If they miss 8 or less, they must make those hours up on the makeup day. <strong>This also causes student frustration—clarify attendance expectations before enrollment.</strong></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as DA.</span> Cannot work in Maryland after our program (MD requires 35-hour Expanded Functions course + General DA exam $290 + RHS exam). Vienna location is 15 min from Maryland. Felon eligibility: If criminal background, can be auxiliary/DA I but not hygienist/DA II/dentist—call Board of Dentistry. Expanded Functions option: 35-hour course + General DA exam ($290) + RHS exam</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Radiology Course Registration</strong>
+                        <em>VWCC Dental Radiation Training: virginiawestern.edu/academics/health-professions/dental-safety/</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WASHINGTON -->
+            <div id="state-washington" class="state-content">
+                <h3>Washington</h3>
+                <div id="map-washington" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>No minimum age</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript OR Ability to Benefit test</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter + transcript + Wonderlic (Ability to Benefit)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Spokane Valley, Burlington</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>Washington Workforce Training and Education Coordinating Board</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, Dental Radiography Certificate, CPR/BLS (renew 2 yrs)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as RDA (after application steps).</span> All DAs MUST register. Registration renews annually on/before birthday. DAs can work without supervision in some areas: No sealants/fluoride until 200 hrs employment + fee + application to DQAC. Nitrous after 14 hrs documented training. WA boarders OR cannot work there. IMPORTANT WA state registration questions about medical conditions, chemical substance use, substance abuse, criminal history, etc. that may impact practice</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Post-Graduation: Washington State Registration</strong>
+                        <em>Register with Washington State Dental Quality Assurance Commission - $40</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook (optional) — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Notes</strong>
+                        <em>Keith update: Two required enrollment docs—Notice of Complaint Filing, Notice of Financial Obligations (Docusign). If HS student, also need counselor letter + transcript + Wonderlic ATB exam (letter does NOT replace diploma). WA state asks registration questions about medical conditions, chemical substance use, pedophilia history, criminal history, drug law violations, healthcare profession violations, license denial/revocation, civil suits, DSHS disqualification</em>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WISCONSIN -->
+            <div id="state-wisconsin" class="state-content">
+                <h3>Wisconsin</h3>
+                <div id="map-wisconsin" class="state-map" style="width: 100%; height: 400px; margin-bottom: 25px; border-radius: 8px; background: #f0f0f0;"></div>
+
+                <div class="entrance-requirements">
+                    <h4>Entrance Requirements</h4>
+                    <div class="req-grid">
+                        <div class="req-item">
+                            <strong>Age</strong>
+                            <em>17</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational documents required to be on file</strong>
+                            <em>Diploma OR Transcript</em>
+                        </div>
+                        <div class="req-item">
+                            <strong>Educational docs for high school students</strong>
+                            <em>Counselor Letter (must graduate within 6 months from course end)</em>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-section">
+                    <div class="value-item">
+                        <strong>Locations</strong>
+                        <em>Janesville, Menomonee Falls, Kenosha, Appleton, Fond du Lac, Glendale</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Licensed By</strong>
+                        <em>The State of Wisconsin, Educational Approval Program</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Certificates Earned</strong>
+                        <em>DA Certificate, CPR/BLS, Radiology Certification</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>CDA Path</strong>
+                        <em>Work 2-4 years (≈3,500 hours), then sit for DANB exam ($425)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Average Pay</strong>
+                        <em>$44,140/year — Source: BLS.gov</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Special State Info</strong>
+                        <em><span class="highlight">Graduates as Dental Assistant.</span></em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Additional Expenses</strong>
+                        <em>Uniform, Textbook — Modern Dental Assisting (11th, 12th, or 13th edition)</em>
+                    </div>
+                    <div class="value-item">
+                        <strong>Notes</strong>
+                        <em>Keith update: Students must receive Student's Right To Cancel Form at enrollment with date enrolled + final cancellation date (3 business days, not counting weekends/holidays)</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .state-content {
+                display: none;
+            }
+            .state-content.active {
+                display: block;
+                animation: fadeIn 0.3s;
+            }
+            .state-btn {
+                margin-right: 8px;
+                margin-bottom: 10px;
+            }
+            .value-section {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .value-item {
+                background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+                padding: 18px;
+                border-radius: 8px;
+                border-left: 4px solid var(--primary);
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                transition: all 0.2s;
+            }
+            .value-item:hover {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                transform: translateY(-2px);
+            }
+            .value-item strong {
+                display: block;
+                color: var(--primary);
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 8px;
+            }
+            .value-item em {
+                color: #374151;
+                font-style: normal;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            .entrance-requirements {
+                background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+                padding: 25px;
+                border-radius: 8px;
+                margin-bottom: 25px;
+                border: 2px solid #93c5fd;
+            }
+            .entrance-requirements h4 {
+                color: var(--primary);
+                margin-bottom: 18px;
+                font-size: 16px;
+            }
+            .req-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 15px;
+            }
+            .req-item {
+                background: white;
+                padding: 14px;
+                border-radius: 6px;
+                border-left: 4px solid var(--primary);
+            }
+            .req-item strong {
+                display: block;
+                color: var(--primary);
+                font-size: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 6px;
+            }
+            .req-item em {
+                color: #374151;
+                font-style: normal;
+                font-size: 13px;
+                line-height: 1.4;
+            }
+            .state-map {
+                border: 2px solid var(--border);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                z-index: 1;
+            }
+        </style>
+
+        <script>
+            document.querySelectorAll('.state-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.state-content').forEach(c => c.classList.remove('active'));
+                    document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+
+                    const stateName = e.target.dataset.state;
+                    document.getElementById('state-' + stateName).classList.add('active');
+                    e.target.classList.add('active');
+                });
+            });
+
+            // Search within active state
+            let currentActiveState = 'alabama';
+            document.getElementById('state-search').addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const activeContent = document.querySelector('.state-content.active');
+
+                if (!activeContent) return;
+
+                const allItems = activeContent.querySelectorAll('.value-item, .req-item');
+                let matchCount = 0;
+
+                allItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (searchTerm === '' || text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        if (searchTerm !== '') matchCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Show all if no search term
+                if (searchTerm === '') {
+                    allItems.forEach(item => item.style.display = 'block');
+                }
+            });
+
+            // State locations and coordinates
+            const stateLocations = {
+                alabama: { center: [32.8067, -86.7113], cities: {
+                    'ozark': [32.6326, -85.6373], 'mobile': [30.6954, -88.2398],
+                    'tuscaloosa': [33.2094, -87.5691], 'fairhope': [30.5213, -87.9089],
+                    'alabaster': [33.1513, -86.8174], 'huntsville': [34.7304, -86.5881]
+                }},
+                arizona: { center: [33.7298, -111.4312], cities: {
+                    'yuma': [32.7321, -114.6270], 'tucson': [32.2217, -110.9265]
+                }},
+                arkansas: { center: [34.9697, -92.3731], cities: {
+                    'conway': [35.0896, -92.4425], 'springdale': [36.3788, -94.1288],
+                    'fort smith': [35.3859, -94.3985], 'jonesboro': [35.8420, -90.7042], 'maumelle': [34.8487, -92.5159]
+                }},
+                florida: { center: [27.6648, -81.5158], cities: {
+                    'tampa': [27.9506, -82.4572], 'tallahassee': [30.4383, -84.2807], 'jacksonville': [30.3322, -81.6557]
+                }},
+                georgia: { center: [33.0406, -83.6431], cities: {
+                    'athens': [33.9519, -83.3738], 'macon': [32.8406, -83.6393],
+                    'newnan': [33.3776, -84.7842], 'cleveland': [34.4768, -83.7648],
+                    'marietta': [33.9526, -84.5535], 'evans': [33.8068, -82.2047]
+                }},
+                idaho: { center: [44.2405, -114.2430], cities: { 'boise': [43.6150, -116.2023] }},
+                illinois: { center: [40.3495, -88.9861], cities: {
+                    'effingham': [39.5447, -88.5420], 'naperville': [41.7658, -88.1495],
+                    'bloomington': [40.4842, -88.9937], 'belvidere': [42.2622, -88.9026],
+                    'champaign': [40.1164, -88.2434], 'alsip': [41.6770, -87.7507], 'mundelein': [42.3182, -87.9389]
+                }},
+                indiana: { center: [39.8494, -86.2604], cities: {
+                    'lafayette': [40.4167, -86.8577], 'south bend': [41.6829, -86.2500],
+                    'evansville': [37.9643, -87.5558], 'bloomington': [39.1670, -86.5342], 'kokomo': [40.4867, -86.1346]
+                }},
+                kansas: { center: [38.5266, -96.7265], cities: {
+                    'salina': [38.8403, -97.5892], 'wichita': [37.6872, -97.3301], 'shawnee': [39.0473, -94.7299]
+                }},
+                kentucky: { center: [37.6681, -84.6701], cities: {
+                    'bowling green': [36.9906, -86.4639], 'louisville': [38.2527, -85.7585], 'somerset': [37.0783, -84.5979]
+                }},
+                louisiana: { center: [31.1695, -91.8749], cities: {
+                    'baton rouge': [30.4515, -91.1871], 'hammond': [30.5041, -90.4615],
+                    'lafayette': [30.2345, -92.0421], 'lake charles': [30.2345, -93.2170],
+                    'slidell': [30.2667, -89.7667], 'monroe': [32.5091, -92.1191],
+                    'houma': [29.5928, -90.7207], 'metairie': [30.3284, -90.1299]
+                }},
+                michigan: { center: [43.3266, -84.5361], cities: {
+                    'hudsonville': [42.8342, -85.8116], 'westland': [42.3261, -83.4129],
+                    'lake orion': [42.7708, -83.2484], 'grand rapids': [42.9633, -85.6789]
+                }},
+                mississippi: { center: [32.7416, -89.6787], cities: {
+                    'forest': [32.3554, -89.4713], 'richland': [32.3041, -89.6721],
+                    'madison': [32.4191, -89.7842], 'hattiesburg': [31.3252, -89.2887],
+                    'olive branch': [34.9587, -89.5204], 'tupelo': [34.2554, -88.7036],
+                    'brookhaven': [31.5831, -90.4447], 'gulfport': [30.3676, -89.0928]
+                }},
+                missouri: { center: [38.4561, -92.2884], cities: {
+                    'kennett': [36.2748, -90.0344], 'washington': [38.5628, -90.7300],
+                    'st. louis': [38.6270, -90.1994], 'kansas city': [39.0997, -94.5786],
+                    'lees summit': [38.9129, -94.3831], 'columbia': [38.9517, -92.3341]
+                }},
+                nevada: { center: [38.8026, -116.4194], cities: {
+                    'sparks': [39.5354, -119.7674], 'las vegas': [36.1699, -115.1398]
+                }},
+                'north-carolina': { center: [35.6301, -79.8064], cities: {
+                    'boone': [36.2169, -81.6747], 'cary': [35.7915, -78.7811],
+                    'greensboro': [36.0726, -79.7920], 'concord': [35.4088, -80.5954],
+                    'raleigh': [35.7796, -78.6382], 'hendersonville': [35.3195, -82.4596],
+                    'hickory': [35.7395, -81.3396], 'gastonia': [35.2615, -81.1797],
+                    'fayetteville': [35.0527, -78.8785], 'wilmington': [34.2257, -77.9447]
+                }},
+                ohio: { center: [40.3888, -82.7649], cities: {
+                    'tipp city': [40.2271, -84.1750], 'bedford': [41.4528, -81.5287],
+                    'akron': [41.0814, -81.5186], 'columbus': [39.9612, -82.9988],
+                    'warren': [41.2361, -80.8626], 'strongsville': [41.3478, -81.8272]
+                }},
+                oklahoma: { center: [35.5653, -96.9289], cities: {
+                    'edmond': [35.6536, -97.4867], 'lawton': [34.7682, -98.3961],
+                    'norman': [35.2226, -97.4867], 'broken arrow': [36.0395, -95.7820],
+                    'stillwater': [36.1157, -97.0585]
+                }},
+                'south-carolina': { center: [34.0007, -81.0348], cities: {
+                    'columbia': [34.0007, -81.0348], 'greenville': [34.8526, -82.3940]
+                }},
+                texas: { center: [31.9686, -99.9018], cities: {
+                    'frisco': [33.1609, -96.8236], 'hurst': [32.8173, -97.1739],
+                    'college station': [30.6280, -96.3344], 'south austin': [30.2270, -97.7440],
+                    'north austin': [30.3745, -97.7397], 'midland': [31.9973, -102.0779],
+                    'new braunsfels': [29.7034, -97.9778], 'pasadena': [29.7433, -95.1997],
+                    'el paso': [31.7619, -106.4850]
+                }},
+                virginia: { center: [37.7693, -78.1694], cities: {
+                    'roanoke': [37.2727, -79.9391], 'lynchburg': [37.4316, -79.1421],
+                    'bridgewater': [38.3604, -79.2652], 'henrico': [37.5407, -77.4360],
+                    'newport news': [37.0874, -76.4730], 'vienna': [38.8814, -77.2727],
+                    'centreville': [38.8531, -77.4432], 'fredericksburg': [38.3035, -77.4610]
+                }},
+                washington: { center: [47.5289, -121.3624], cities: {
+                    'spokane valley': [47.5335, -117.2540], 'burlington': [48.4761, -122.3383]
+                }},
+                wisconsin: { center: [43.7844, -88.7879], cities: {
+                    'janesville': [42.6819, -89.2400], 'menomonee falls': [43.1845, -88.1157],
+                    'kenosha': [42.5847, -87.8218], 'appleton': [44.2618, -88.3988],
+                    'fond du lac': [43.7729, -88.4427], 'glendale': [43.1084, -87.9320]
+                }}
+            };
+
+            // Initialize maps when tab is shown and track current state
+            document.querySelectorAll('.state-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const stateName = e.target.dataset.state;
+                    currentActiveState = stateName;
+                    document.getElementById('state-search').value = ''; // Clear search on state change
+                    setTimeout(() => {
+                        initializeMap(stateName);
+                    }, 100);
+                });
+            });
+
+            function initializeMap(stateName) {
+                const mapId = 'map-' + stateName;
+                const mapElement = document.getElementById(mapId);
+                if (!mapElement || mapElement.childNodes.length > 0) return; // Already initialized
+
+                const stateData = stateLocations[stateName];
+                if (!stateData) return;
+
+                const map = L.map(mapId).setView(stateData.center, 7);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors',
+                    maxZoom: 19
+                }).addTo(map);
+
+                // Add pins for each city location
+                Object.entries(stateData.cities).forEach(([cityName, coords]) => {
+                    L.circleMarker(coords, {
+                        radius: 7,
+                        fillColor: '#0066cc',
+                        color: '#0052a3',
+                        weight: 2,
+                        opacity: 1,
+                        fillOpacity: 0.85
+                    }).addTo(map).bindPopup('<strong>' + cityName.charAt(0).toUpperCase() + cityName.slice(1) + '</strong>');
+                });
+            }
+
+            // Initialize Alabama map on load
+            setTimeout(() => initializeMap('alabama'), 500);
+        </script>
 
         <!-- SALESFORCE DATA -->
         <div id="data" class="section">
@@ -1174,7 +2961,7 @@
         <!-- QUIZ -->
         <div id="quiz" class="section">
             <h2>Knowledge Check Quiz</h2>
-            <p style="margin-bottom: 20px;">Test your knowledge. Passing score: 70% (18/25 correct).</p>
+            <p style="margin-bottom: 20px;">Test your knowledge. Passing score: 70% (19/26 correct).</p>
 
             <div class="info-box">
                 <label for="quizName" style="display: block; margin-bottom: 10px;"><strong>Enter your name:</strong></label>
@@ -1436,6 +3223,16 @@
                             <label class="option-label"><input type="radio" name="q26" value="d"> If they have a co-signer</label>
                         </div>
                     </div>
+
+                    <div class="question">
+                        <p>27. We fight against the belief that:</p>
+                        <div class="options">
+                            <label class="option-label"><input type="radio" name="q27" value="a"> Trade schools aren't valuable</label>
+                            <label class="option-label"><input type="radio" name="q27" value="b"> The only way to be a valuable employee is to obtain a degree with extensive education</label>
+                            <label class="option-label"><input type="radio" name="q27" value="c"> Dental assisting requires 4 years of college</label>
+                            <label class="option-label"><input type="radio" name="q27" value="d"> Everyone should go to a traditional university</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="button-group">
@@ -1473,7 +3270,8 @@
             q6: 'c', q7: 'b', q8: 'b', q9: 'b', q10: 'b',
             q11: 'c', q12: 'b', q13: 'c', q14: 'c', q15: 'b',
             q16: 'b', q17: 'c', q18: 'b', q19: 'b', q20: 'c',
-            q21: 'c', q22: 'c', q23: 'c', q24: 'b', q25: 'b', q26: 'b'
+            q21: 'c', q22: 'c', q23: 'c', q24: 'b', q25: 'b', q26: 'b',
+            q27: 'b'
         };
 
         function submitQuiz() {
@@ -1488,7 +3286,7 @@
             let results = [];
             let displayNum = 1;
 
-            for (let i = 1; i <= 26; i++) {
+            for (let i = 1; i <= 27; i++) {
                 if (i === 4) continue; // Skip q4
 
                 const name = 'q' + i;
@@ -1506,8 +3304,8 @@
                 displayNum++;
             }
 
-            const percentage = Math.round((score / 25) * 100);
-            const pass = percentage >= 70;
+            const percentage = Math.round((score / 26) * 100);
+            const pass = score >= 19;
 
             document.getElementById('quizForm').style.display = 'none';
             document.getElementById('resultsContainer').classList.add('show');
@@ -1519,10 +3317,10 @@
             const message = document.getElementById('scoreMessage');
             const nameDisplay = `<strong>${quizName}</strong> — `;
             if (pass) {
-                message.textContent = nameDisplay + `Excellent! You passed with ${score}/25 correct. You're ready to represent Accelerated Academy!`;
+                message.textContent = nameDisplay + `Excellent! You passed with ${score}/26 correct. You're ready to represent Accelerated Academy!`;
                 message.style.color = 'var(--success)';
             } else {
-                message.textContent = nameDisplay + `You scored ${score}/25. Review the training materials and try again to reach 70%.`;
+                message.textContent = nameDisplay + `You scored ${score}/26. Review the training materials and try again to reach 19 correct (73%).`;
                 message.style.color = 'var(--danger)';
             }
 
