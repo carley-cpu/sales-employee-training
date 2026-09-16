@@ -2267,3 +2267,35 @@ Content-Type: text/plain; charset=utf-8
                     <div class="value-item">
                         <strong>Certificates Earned</strong>
                         <em>Completion Certificate, CPR/BLS. Note: No radiology certificate (must pass
+RDA Exam through another state institution).</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.nav-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+                button.classList.add('active');
+            });
+        });
+
+        // State tabs
+        document.querySelectorAll('.state-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.state-content').forEach(s => s.classList.remove('active'));
+                document.querySelectorAll('.state-btn').forEach(b => b.classList.remove('active'));
+                const stateId = 'state-' + button.getAttribute('data-state');
+                document.getElementById(stateId).classList.add('active');
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
