@@ -2277,8 +2277,7 @@ RDA Exam through another state institution).</em>
             </div>
         </div>
     </div>
-
-     <script>
+    <script>
         // Main nav tab switching
         document.querySelectorAll('.nav-btn').forEach(button => {
             button.addEventListener('click', function() {
@@ -2293,38 +2292,28 @@ RDA Exam through another state institution).</em>
             });
         });
 
-        // State tabs switching
-        const stateBtns = document.querySelectorAll('.state-btn');
-        stateBtns.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
+        // State tabs switching - SIMPLIFIED
+        document.querySelectorAll('.state-btn').forEach(button => {
+            button.addEventListener('click', function() {
                 const stateValue = this.getAttribute('data-state');
+                const targetId = 'state-' + stateValue;
                 
                 // Hide all state contents
                 document.querySelectorAll('.state-content').forEach(content => {
                     content.classList.remove('active');
                 });
                 
-                // Remove active class from all buttons
-                stateBtns.forEach(btn => {
+                // Remove active from all state buttons
+                document.querySelectorAll('.state-btn').forEach(btn => {
                     btn.classList.remove('active');
                 });
                 
-                // Show selected state and mark button active
-                const targetId = 'state-' + stateValue;
+                // Show selected state
                 const targetContent = document.getElementById(targetId);
                 if (targetContent) {
                     targetContent.classList.add('active');
                     this.classList.add('active');
                 }
             });
-        });
-
-        // Set Alabama as default on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            const alabamaBtn = document.querySelector('[data-state="alabama"]');
-            if (alabamaBtn) {
-                alabamaBtn.classList.add('active');
-            }
         });
     </script>
