@@ -2553,3 +2553,51 @@
     </div>
                 </div>
             </div>
+
+    
+    <script>
+        // Main navigation tabs
+        const navBttons = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section');
+
+        navBttons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Get the tab name
+                const tabName = this.getAttribute('data-tab');
+                
+                // Remove active from all sections and buttons
+                sections.forEach(section => section.classList.remove('active'));
+                navBttons.forEach(button => button.classList.remove('active'));
+                
+                // Add active to clicked button and matching section
+                this.classList.add('active');
+                const targetSection = document.getElementById(tabName);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        // State tabs
+        const stateBtns = document.querySelectorAll('.state-btn');
+        const stateContents = document.querySelectorAll('.state-content');
+
+        stateBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const stateName = this.getAttribute('data-state');
+                
+                // Remove active from all
+                stateContents.forEach(content => content.classList.remove('active'));
+                stateBtns.forEach(button => button.classList.remove('active'));
+                
+                // Add active to clicked
+                this.classList.add('active');
+                const targetState = document.getElementById('state-' + stateName);
+                if (targetState) {
+                    targetState.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
